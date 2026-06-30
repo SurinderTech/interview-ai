@@ -113,7 +113,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 
 # 📷 Screenshots
 
-<img src="" alt="Description of the image">
+<img src="Screenshot (255).png" alt="Description of the image">
 
 ---
 
