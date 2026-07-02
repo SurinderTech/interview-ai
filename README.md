@@ -1,6 +1,6 @@
 # InterviewAI — Landing Page
 
-Built with Next.js 16 (App Router) + Tailwind CSS v4, following the InterviewAI Product Design System spec exactly (dark-first palette, Inter/Geist type, 8pt spacing, semantic color rules).
+
 
 ## Run locally
 
