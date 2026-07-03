@@ -115,7 +115,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 ## 🏠 Home
 
 <p align="center">
-  <img src="" alt="InterviewAI Home" width="100%">
+  <img src="Screenshot (268).png" alt="InterviewAI Home" width="100%">
 </p>
 
 ---
@@ -123,7 +123,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 ## 🎥 Demo
 
 <p align="center">
-  <img src="YOUR_DEMO_IMAGE_URL" alt="InterviewAI Demo" width="100%">
+  <img src="" alt="InterviewAI Demo" width="100%">
 </p>
 
 ---
