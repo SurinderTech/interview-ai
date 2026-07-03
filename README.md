@@ -136,10 +136,10 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 
 ---
 
-## 📊 Dashboard
+## 📊Features
 
 <p align="center">
-  <img src="" alt="InterviewAI Dashboard" width="100%">
+  <img src="Screenshot (259).png" alt="InterviewAI Dashboard" width="100%">
 </p>
 
 
