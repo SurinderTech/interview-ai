@@ -112,7 +112,35 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 ---
 
 # 📷 Screenshots
+## 🏠 Home
 
+<p align="center">
+  <img src="" alt="InterviewAI Home" width="100%">
+</p>
+
+---
+
+## 🎥 Demo
+
+<p align="center">
+  <img src="YOUR_DEMO_IMAGE_URL" alt="InterviewAI Demo" width="100%">
+</p>
+
+---
+
+## ⚙️ How It Works
+
+<p align="center">
+  <img src="YOUR_HOW_IT_WORKS_IMAGE_URL" alt="How InterviewAI Works" width="100%">
+</p>
+
+---
+
+## 📊 Dashboard
+
+<p align="center">
+  <img src="YOUR_DASHBOARD_IMAGE_URL" alt="InterviewAI Dashboard" width="100%">
+</p>
 
 
 ---
