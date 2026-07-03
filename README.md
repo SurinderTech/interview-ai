@@ -119,7 +119,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 
 ---
 
-## 🎥 Demo
+## 🎥 How It Works
 
 <p align="center">
   <img src="Screenshot (256).png" alt="InterviewAI Demo" width="100%">
@@ -127,7 +127,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 
 ---
 
-## ⚙️ How It Works
+ 
 
 <p align="center">
   <img src="YOUR_HOW_IT_WORKS_IMAGE_URL" alt="How InterviewAI Works" width="100%">
