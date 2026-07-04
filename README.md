@@ -71,43 +71,16 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 
 ---
 
-# 🖥️ Tech Stack
+## 🖥️ Tech Stack
 
-### Frontend
-
-* Next.js
-* React
-* TypeScript
-* Tailwind CSS
-* Framer Motion
-* GSAP
-
-### Backend
-
-* FastAPI
-* Python
-* REST APIs
-
-### AI
-
-* Gemini API
-* OpenAI
-* Claude
-* Whisper (Speech Recognition)
-
-### Database
-
-* PostgreSQL
-
-
-### Authentication
-
-* Clerk Authentication
-
-### Deployment
-
-* Vercel<br>
-
+| Category | Technologies |
+| :-------- | :----------- |
+| 🎨 **Frontend** | Next.js • React • TypeScript • Tailwind CSS • Framer Motion • GSAP |
+| ⚙️ **Backend** | FastAPI • Python • REST APIs |
+| 🤖 **AI** | Gemini API • OpenAI • Claude • Whisper (Speech Recognition) |
+| 🗄️ **Database** | PostgreSQL |
+| 🔐 **Authentication** | Clerk Authentication |
+| 🚀 **Deployment** | Vercel |
 
 ---
 
