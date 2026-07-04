@@ -98,7 +98,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 ### Database
 
 * PostgreSQL
-* Prisma ORM
+
 
 ### Authentication
 
