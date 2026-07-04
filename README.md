@@ -129,9 +129,6 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 
  
 
-<p align="center">
-  <img src="YOUR_HOW_IT_WORKS_IMAGE_URL" alt="How InterviewAI Works" width="100%">
-</p>
 
 ---
 
