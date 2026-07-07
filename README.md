@@ -8,7 +8,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 
 ---
 
-# ✨ Features
+#  Features
 
 ### 🤖 AI Interviewer
 
