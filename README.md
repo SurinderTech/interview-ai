@@ -80,7 +80,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 | 🤖 **AI** | Gemini API • OpenAI • Claude • Whisper (Speech Recognition) |
 | 🗄️ **Database** | PostgreSQL |
 | 🔐 **Authentication** | Clerk Authentication |
-| 🚀 **Deployment** | Vercel |
+|  **Deployment** | Vercel |
 
 ---
 
