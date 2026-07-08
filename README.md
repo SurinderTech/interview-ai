@@ -192,7 +192,6 @@ UPLOADTHING_APP_ID=
 
 # 🛣️ Roadmap
 
-* [ ] AI Voice Interview
 * [ ] AI Video Interview
 * [ ] Resume Analysis
 * [ ] ATS Resume Checker
@@ -205,6 +204,7 @@ UPLOADTHING_APP_ID=
 * [ ] Mobile Application
 * [ ] Interview Leaderboards
 * [ ] Recruiter Dashboard
+* [ ] All Entrance exams like upsc , ssc, cat, interview preparation live with ai avatars are available 
 
 ---
 
