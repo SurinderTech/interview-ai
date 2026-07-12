@@ -31,7 +31,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 * Fluency insights
 * Interview summary
 
-### 💡 AI Feedback
+###  AI Feedback
 
 * Strengths
 * Weaknesses
