@@ -1,4 +1,4 @@
-# 🚀 InterviewAI
+#  InterviewAI
 
 > **Master Interviews with AI. Practice. Improve. Get Hired.**
 
