@@ -185,7 +185,7 @@ http://localhost:3000
 
 ---
 
-# 🔑 Environment Variables
+#  Environment Variables
 
 Create a `.env.local` file.
 
