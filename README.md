@@ -17,7 +17,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 * Natural voice conversation
 * Real interview experience
 
-### 🎤 Speech Recognition
+###  Speech Recognition
 
 * Real-time speech-to-text
 * Voice interaction
