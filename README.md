@@ -236,7 +236,7 @@ Contributions are welcome!
 
 ---
 
-# ⭐ Support
+#  Support
 
 If you like this project, consider giving it a ⭐ on GitHub.
 
@@ -260,7 +260,7 @@ This project is licensed under the MIT License.
 
 ---
 
-## 🌟 Vision
+##  Vision
 
 InterviewAI aims to make world-class interview preparation accessible to everyone.
 
