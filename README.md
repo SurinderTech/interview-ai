@@ -10,7 +10,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 
 #  Features
 
-### 🤖 AI Interviewer
+###  AI Interviewer
 
 * Human-like AI interviewer
 * Dynamic follow-up questions
