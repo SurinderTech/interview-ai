@@ -1,85 +1,162 @@
 "use client";
 
-import { useState } from "react";
+import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import clsx from "clsx";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 const CATEGORIES = [
-  { label: "Software Engineering", color: "var(--color-purple)" },
-  { label: "AI Engineering", color: "var(--color-blue)" },
-  { label: "UPSC", color: "var(--color-warning)" },
-  { label: "Corporate", color: "var(--color-green)" },
-  { label: "Healthcare", color: "var(--color-danger)" },
-  { label: "Teaching", color: "var(--color-blue)" },
-  { label: "Banking", color: "var(--color-green)" },
-  { label: "Law", color: "var(--color-purple)" },
+  {
+    id: "engineering",
+    icon: "🎓",
+    title: "Engineering Entrance Exams",
+    subtitle: "JEE, BITSAT, VIT, CUET...",
+    color: "#818cf8",
+    bg: "rgba(129,140,248,0.08)",
+    border: "rgba(129,140,248,0.25)",
+    href: "/register?track=jee",
+  },
+  {
+    id: "medical",
+    icon: "🩺",
+    title: "Medical Entrance Exams",
+    subtitle: "NEET, AIIMS, JIPMER...",
+    color: "#f472b6",
+    bg: "rgba(244,114,182,0.08)",
+    border: "rgba(244,114,182,0.25)",
+    href: "/register?track=neet",
+  },
+  {
+    id: "civil",
+    icon: "🏛️",
+    title: "Civil Services & State PSC",
+    subtitle: "UPSC, State PSC...",
+    color: "#fb923c",
+    bg: "rgba(251,146,60,0.08)",
+    border: "rgba(251,146,60,0.25)",
+    href: "/register?track=upsc",
+  },
+  {
+    id: "government",
+    icon: "🏛",
+    title: "Government Jobs & Recruitment",
+    subtitle: "SSC, Banking, Railways, Defence, Police...",
+    color: "#34d399",
+    bg: "rgba(52,211,153,0.08)",
+    border: "rgba(52,211,153,0.25)",
+    href: "/register?track=ssc",
+  },
+  {
+    id: "corporate",
+    icon: "💼",
+    title: "Corporate Jobs & Placements",
+    subtitle: "Campus, Fresher, Experienced...",
+    color: "#60a5fa",
+    bg: "rgba(96,165,250,0.08)",
+    border: "rgba(96,165,250,0.25)",
+    href: "/register?track=corporate",
+  },
+  {
+    id: "skills",
+    icon: "</>",
+    title: "Skills & Certifications",
+    subtitle: "Coding, Aptitude, Language, Others...",
+    color: "#a78bfa",
+    bg: "rgba(167,139,250,0.08)",
+    border: "rgba(167,139,250,0.25)",
+    href: "/register?track=skills",
+  },
+];
+
+const STATS = [
+  { value: "100K+", label: "Students & Professionals" },
+  { value: "500K+", label: "Practice Questions" },
+  { value: "95%", label: "Reported Improvement" },
+  { value: "4.8/5", label: "Average User Rating", icon: "⭐" },
 ];
 
 export function CareerCategories() {
-  const [active, setActive] = useState(0);
-
   return (
-    <section className="py-24 md:py-32">
+    <section id="categories" className="py-24 md:py-32">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1fr_1.1fr]">
+        <div className="mb-4 flex items-center justify-between">
           <div>
-            <Eyebrow color="blue">Built for everyone</Eyebrow>
-            <h2 className="mt-5 text-[34px] font-bold leading-[1.15] tracking-tight text-white sm:text-[42px]">
-              Whatever you&rsquo;re interviewing for.
+            <h2 className="text-[32px] font-bold tracking-tight text-white sm:text-[40px]">
+              Choose Your Preparation Path
             </h2>
-            <p className="mt-4 max-w-[440px] text-[17px] leading-[1.6] text-[var(--color-text-secondary)]">
-              InterviewAI adapts its questions and scoring to your field —
-              from technical screens to civil service interviews.
+            <p className="mt-3 max-w-[520px] text-[16px] leading-[1.65] text-[var(--color-text-secondary)]">
+              Whether it&apos;s exams, interviews or professional assessments — we&apos;ve got you covered.
             </p>
-
-            <div className="mt-9 grid grid-cols-2 gap-3">
-              {CATEGORIES.map((cat, i) => (
-                <button
-                  key={cat.label}
-                  onClick={() => setActive(i)}
-                  className={clsx(
-                    "rounded-[14px] border px-4 py-3 text-left text-[14px] font-medium transition-all duration-200",
-                    active === i
-                      ? "border-white/20 bg-white/[0.06] text-white"
-                      : "border-white/[0.06] text-[var(--color-text-secondary)] hover:border-white/15 hover:text-white"
-                  )}
-                >
-                  <span
-                    className="mb-1.5 block h-1.5 w-1.5 rounded-full"
-                    style={{ background: active === i ? cat.color : "rgba(255,255,255,0.2)" }}
-                  />
-                  {cat.label}
-                </button>
-              ))}
-            </div>
           </div>
-
-          <div className="relative mx-auto w-full max-w-[420px]">
-            <div className="overflow-hidden rounded-[var(--radius-video)] glass shadow-soft">
-              <video
-                key={active}
-                className="h-full w-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster="/media/categories-loop-poster.jpg"
-              >
-                <source src="/media/categories-loop.webm" type="video/webm" />
-                <source src="/media/categories-loop.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div className="absolute -bottom-5 -right-5 rounded-[var(--radius-card)] glass px-4 py-3 shadow-soft">
-              <p className="text-[13px] font-semibold text-white">
-                {CATEGORIES[active].label}
-              </p>
-              <p className="text-[11.5px] text-[var(--color-text-muted)]">
-                Tailored question bank
-              </p>
-            </div>
-          </div>
+          <a
+            href="/register"
+            className="hidden items-center gap-1.5 text-[14px] font-medium text-[var(--color-purple)] hover:opacity-80 transition-opacity sm:flex"
+          >
+            View All Categories
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
+
+        {/* Category grid */}
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {CATEGORIES.map((cat, i) => (
+            <motion.a
+              key={cat.id}
+              href={cat.href}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: EASE, delay: i * 0.07 }}
+              whileHover={{ y: -4, scale: 1.01 }}
+              className="group flex items-center gap-4 rounded-[20px] border p-5 transition-all duration-300"
+              style={{
+                background: cat.bg,
+                borderColor: cat.border,
+              }}
+            >
+              <div
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] text-[22px]"
+                style={{ background: `${cat.color}18`, border: `1px solid ${cat.color}30` }}
+              >
+                {cat.icon === "</>" ? (
+                  <span style={{ color: cat.color, fontFamily: "monospace", fontSize: "14px", fontWeight: 700 }}>
+                    {"</>"}
+                  </span>
+                ) : (
+                  cat.icon
+                )}
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-white leading-tight">{cat.title}</p>
+                <p className="mt-0.5 text-[13px] text-[var(--color-text-muted)] truncate">{cat.subtitle}</p>
+              </div>
+              <div
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-200 group-hover:translate-x-1"
+                style={{ background: `${cat.color}18`, border: `1px solid ${cat.color}30` }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={cat.color} strokeWidth="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+
+        {/* Stats bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: EASE }}
+          className="mt-14 grid grid-cols-2 gap-6 rounded-[24px] border border-white/[0.06] bg-white/[0.02] p-8 sm:grid-cols-4"
+        >
+          {STATS.map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="text-[28px] font-bold text-white">{stat.icon}{stat.value}</p>
+              <p className="mt-1 text-[13px] text-[var(--color-text-muted)]">{stat.label}</p>
+            </div>
+          ))}
+        </motion.div>
       </Container>
     </section>
   );
