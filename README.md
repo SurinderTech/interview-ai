@@ -46,15 +46,7 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 * Full Stack Development
 * Artificial Intelligence
 * Machine Learning
-* Data Science
-* Cyber Security
-* DevOps
-* Cloud Computing
-* Product Management
-* HR Interviews
-* Behavioral Interviews
-* Government Exam Interviews
-* Custom Interviews
+
 
 ### 📈 Progress Tracking
 
