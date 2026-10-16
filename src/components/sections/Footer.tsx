@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 const COLUMNS = [
   {
     title: "Product",
-    links: ["Features", "Pricing", "How it works"],
+    links: ["Features", "How it works"],
   },
   {
     title: "Company",

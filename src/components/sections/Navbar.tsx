@@ -33,8 +33,7 @@ const NAV_LINKS = [
       { label: "HR & Behavioral", href: "#categories", icon: "🤝" },
     ],
   },
-  { label: "How It Works", href: "#solution" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "How It Works", href: "#how-it-works" },
   {
     label: "Resources",
     href: "#",

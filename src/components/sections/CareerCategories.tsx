@@ -1,7 +1,12 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "@/components/ui/Container";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -68,34 +73,47 @@ const CATEGORIES = [
   },
 ];
 
-const STATS = [
-  { value: "100K+", label: "Students & Professionals" },
-  { value: "500K+", label: "Practice Questions" },
-  { value: "95%", label: "Reported Improvement" },
-  { value: "4.8/5", label: "Average User Rating", icon: "⭐" },
-];
 
 export function CareerCategories() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+    const ctx = gsap.context(() => {
+      gsap.from(headRef.current, {
+        opacity: 0, y: 40, duration: 0.9, ease: "power3.out",
+        scrollTrigger: { trigger: headRef.current, start: "top 82%" },
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="categories" className="py-24 md:py-32">
+    <section ref={sectionRef} id="categories" className="relative py-28 md:py-36 overflow-hidden">
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 bg-gradient-to-r from-transparent via-[#34d399]/40 to-transparent" />
       <Container>
-        <div className="mb-4 flex items-center justify-between">
+        <div ref={headRef} className="mb-4 flex items-center justify-between">
           <div>
-            <h2 className="text-[32px] font-bold tracking-tight text-white sm:text-[40px]">
-              Choose Your Preparation Path
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#34d399]/30 bg-[#34d399]/10 px-4 py-1.5 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-[#34d399] mb-5 block w-fit">
+              Preparation Paths
+            </span>
+            <h2 className="text-[32px] font-extrabold tracking-[-0.03em] text-white sm:text-[44px]">
+              Choose Your Path
             </h2>
-            <p className="mt-3 max-w-[520px] text-[16px] leading-[1.65] text-[var(--color-text-secondary)]">
-              Whether it&apos;s exams, interviews or professional assessments — we&apos;ve got you covered.
+            <p className="mt-3 max-w-[520px] text-[16px] leading-[1.65] text-[#a1a1aa]">
+              Whether it&apos;s exams, interviews or professional assessments — pick your track and start today.
             </p>
           </div>
           <a
             href="/register"
-            className="hidden items-center gap-1.5 text-[14px] font-medium text-[var(--color-purple)] hover:opacity-80 transition-opacity sm:flex"
+            className="hidden items-center gap-1.5 text-[14px] font-medium text-[#7c3aed] hover:opacity-80 transition-opacity sm:flex"
           >
             View All Categories
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
+
 
         {/* Category grid */}
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -142,21 +160,6 @@ export function CareerCategories() {
           ))}
         </div>
 
-        {/* Stats bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="mt-14 grid grid-cols-2 gap-6 rounded-[24px] border border-white/[0.06] bg-white/[0.02] p-8 sm:grid-cols-4"
-        >
-          {STATS.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="text-[28px] font-bold text-white">{stat.icon}{stat.value}</p>
-              <p className="mt-1 text-[13px] text-[var(--color-text-muted)]">{stat.label}</p>
-            </div>
-          ))}
-        </motion.div>
       </Container>
     </section>
   );

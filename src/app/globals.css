@@ -201,3 +201,130 @@ body {
 .animate-bounce {
   animation: bounce 1s infinite;
 }
+
+/* ─── Marquee / horizontal infinite scroll ─────────────────────── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+.animate-marquee-slow {
+  animation: marquee 42s linear infinite;
+}
+
+/* ─── GSAP reveal base states ─────────────────────────────────── */
+/* Components start invisible; GSAP animates them in */
+.gsap-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.gsap-fade-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.gsap-fade-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+/* ─── Gradient text shimmer ───────────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.text-shimmer {
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 30%, #f472b6 60%, #a78bfa 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ─── Card hover lift (used on feature/audience cards) ───────── */
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+}
+
+/* ─── Glow border on hover ─────────────────────────────────────── */
+.glow-border {
+  position: relative;
+}
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.6), rgba(96,165,250,0.4), rgba(244,114,182,0.4));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.glow-border:hover::before {
+  opacity: 1;
+}
+
+/* ─── Section connector line (top divider glow) ─────────────── */
+.section-divider {
+  position: relative;
+}
+.section-divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(124,58,237,0.4), transparent);
+}
+
+/* ─── Dot grid pattern for CTA backgrounds ──────────────────── */
+.dot-grid {
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ─── Neon tag glow ──────────────────────────────────────────── */
+@keyframes tag-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124,58,237,0); }
+  50% { box-shadow: 0 0 12px 2px rgba(124,58,237,0.35); }
+}
+.tag-glow {
+  animation: tag-pulse 2.5s ease-in-out infinite;
+}
+
+/* ─── Smooth number counter animation support ─────────────────── */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Timeline line gradient ─────────────────────────────────── */
+.timeline-line {
+  background: linear-gradient(to bottom, #7c3aed, #60a5fa 50%, #34d399);
+}
+
+/* ─── Skill bar animated fill ───────────────────────────────── */
+@keyframes bar-fill {
+  from { width: 0%; }
+}
+.skill-bar-animated {
+  animation: bar-fill 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ─── Three.js canvas layering fix ──────────────────────────── */
+canvas.three-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+

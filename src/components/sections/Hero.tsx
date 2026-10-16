@@ -48,16 +48,7 @@ const AVATARS = [
   },
 ];
 
-/* ─── Stats ───────────────────────────────────────────────────────── */
-const STATS = [
-  { icon: "👥", value: "500K+", label: "Students & Job Seekers" },
-  { icon: "⭐", value: "4.9/5", label: "User Satisfaction" },
-  { icon: "📝", value: "1000+", label: "Interview Scenarios" },
-  { icon: "💼", value: "50+", label: "Roles & Exams" },
-];
 
-/* ─── Trust logos ─────────────────────────────────────────────────── */
-const TRUST_LOGOS = ["IIT", "NIT", "AIIMS", "UPSC", "Google", "Microsoft", "Amazon", "Infosys", "TCS", "Mahindra"];
 
 /* ─── Waveform bars ──────────────────────────────────────────────── */
 function WaveformBars({ color }: { color: string }) {
@@ -235,16 +226,7 @@ export function Hero() {
               Live demo available. Have a real conversation and ask anything about InterviewAI.
             </p>
 
-            {/* ── Stats row ── */}
-            <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              {STATS.map((s) => (
-                <div key={s.label} className="flex flex-col items-center text-center">
-                  <span className="text-[18px]">{s.icon}</span>
-                  <p className="mt-1 text-[22px] font-bold text-white tracking-tight">{s.value}</p>
-                  <p className="text-[11px] text-white/40 leading-tight">{s.label}</p>
-                </div>
-              ))}
-            </div>
+
           </motion.div>
 
           {/* ════ RIGHT COLUMN — Tavus embed ════ */}
@@ -436,7 +418,7 @@ export function Hero() {
             Trusted by learners from
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-            {TRUST_LOGOS.map((name) => (
+            {["IIT", "NIT", "AIIMS", "UPSC", "Google", "Microsoft", "Amazon", "Infosys", "TCS", "Mahindra"].map((name) => (
               <span
                 key={name}
                 className="text-[14px] font-bold text-white/20 transition-colors hover:text-white/50"
@@ -448,21 +430,7 @@ export function Hero() {
         </div>
       </Container>
 
-      {/* ── Testimonial strip ── */}
-      <div className="mt-0 border-t border-white/[0.06] bg-gradient-to-r from-[#7c3aed]/10 via-transparent to-[#3b82f6]/10 py-8">
-        <Container>
-          <div className="flex items-center gap-6">
-            <div className="h-px flex-1 bg-white/[0.06]" />
-            <blockquote className="max-w-[520px] text-center">
-              <p className="text-[15px] leading-[1.6] text-white/70 italic">
-                &ldquo;It feels like a real interview. The feedback helped me improve so much.&rdquo;
-              </p>
-              <cite className="mt-2 block text-[12px] text-white/35">— InterviewAI User</cite>
-            </blockquote>
-            <div className="h-px flex-1 bg-white/[0.06]" />
-          </div>
-        </Container>
-      </div>
+
     </section>
   );
 }
