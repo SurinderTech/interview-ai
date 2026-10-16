@@ -95,19 +95,6 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 * Claude
 * Whisper (Speech Recognition)
 
-### Database
-
-* PostgreSQL
-* Prisma ORM
-
-### Authentication
-
-* Clerk Authentication
-
-### Deployment
-
-* Vercel
-*  Render
 
 ---
 
