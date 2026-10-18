@@ -69,22 +69,7 @@ InterviewAI is an AI-powered mock interview platform that helps students and pro
 
 ---
 
-## 📷 Screenshots
 
-<p align="center">
-  <img src="./screenshots/screenshot-1.png" alt="Landing Page" width="48%" />
-  <img src="./screenshots/screenshot-2.png" alt="Authentication" width="48%" />
-</p>
-
-<p align="center">
-  <img src="./screenshots/screenshot-3.png" alt="AI Interview" width="48%" />
-  <img src="./screenshots/screenshot-4.png" alt="Live Feedback" width="48%" />
-</p>
-
-<p align="center">
-  <img src="./screenshots/screenshot-5.png" alt="Results Dashboard" width="48%" />
-  <img src="./screenshots/screenshot-6.png" alt="Analytics" width="48%" />
-</p>
 
 ---
 
