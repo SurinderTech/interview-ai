@@ -54,9 +54,6 @@ Whether you'r
 
 ---
 
-# 🖥️ Tech Stack
-
-### Frontend
 
 * Next.js
 * React
