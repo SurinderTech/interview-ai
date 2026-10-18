@@ -27,15 +27,6 @@ InterviewAI is an AI-powered mock interview platform that helps students and pro
 * Improvement suggestions
 * Personalized recommendations
 
-### 📚 Multiple Interview Categories
-
-* Software Engineering
-* Frontend Development
-* Backend Development
-* Full Stack Development
-* Artificial Intelligence
-* Machine Learning
-
 
 ### 📈 Progress Tracking
 
