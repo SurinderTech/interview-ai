@@ -55,13 +55,6 @@ Whether you'r
 ---
 
 
-* Next.js
-* React
-* TypeScript
-* Tailwind CSS
-* Framer Motion
-* GSAP
-
 ### Backend
 
 * FastAPI
