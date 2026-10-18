@@ -4,8 +4,7 @@
 
 InterviewAI is an AI-powered mock interview platform that helps students and professionals prepare for technical and non-technical interviews through realistic AI conversations, instant feedback, performance analytics, and personalized improvement suggestions.
 
-Whether you're preparing for software engineering, AI/ML, data science, business, finance, or government exams, InterviewAI provides a realistic interview experience powered by modern AI.
-
+Whether you'r
 ---
 
 
