@@ -31,15 +31,6 @@ rd
 
 ---
 
-
-### Backend
-
-* FastAPI
-* Python
-* REST APIs
-
-### AI
-
 * Gemini API
 * OpenAI
 * Claude
