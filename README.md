@@ -27,19 +27,7 @@ InterviewAI is an AI-powered mock interview platform that helps students and pro
 * Improvement suggestions
 * Personalized recommendations
 
-
-### 📈 Progress Tracking
-
-* Interview history
-* Score trends
-* Skill improvement over time
-* Performance dashboard
-
-### 🔒 Authentication
-
-* Secure login
-* User profiles
-* Protected dashboard
+rd
 
 ---
 
