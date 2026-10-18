@@ -8,14 +8,6 @@ Whether you're preparing for software engineering, AI/ML, data science, business
 
 ---
 
-#  Features
-
-###  AI Interviewer
-
-* Human-like AI interviewer
-* Dynamic follow-up questions
-* Natural voice conversation
-* Real interview experience
 
 ###  Speech Recognition
 
