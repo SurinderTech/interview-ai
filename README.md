@@ -31,12 +31,6 @@ rd
 
 ---
 
-* Gemini API
-* OpenAI
-* Claude
-* Whisper (Speech Recognition)
-
-
 ---
 
 
