@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=40&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=700&height=80&lines=InterviewAI+%F0%9F%A4%96;Practice+interviews+with+AI;Land+your+dream+job!" alt="InterviewAI" />
 
@@ -12,40 +12,40 @@
 ![GSAP](https://img.shields.io/badge/GSAP-3-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 ![Three.js](https://img.shields.io/badge/Three.js-r185-000000?style=for-the-badge&logo=three.js&logoColor=white)
 
-> **The world's most realistic AI interview practice platform — powered by a live video avatar that speaks, listens, and adapts in real time.**
+> **The world's most realistic AI interview practice platform â€” powered by a live video avatar that speaks, listens, and adapts in real time.**
 
 </div>
 
 ---
 
-## 🎙️ Meet Priya — Your Live AI Interviewer
+## ðŸŽ™ï¸ Meet Priya â€” Your Live AI Interviewer
 
 <div align="center">
 
 <br/>
 
-<img src="https://cdn.replica.tavus.io/61269/thumbnail.jpg" alt="Priya — AI Interviewer" width="340" style="border-radius:24px; box-shadow: 0 0 60px #7c3aed55;" />
+<img src="https://cdn.replica.tavus.io/61269/thumbnail.jpg" alt="Priya â€” AI Interviewer" width="340" style="border-radius:24px; box-shadow: 0 0 60px #7c3aed55;" />
 
 <br/><br/>
 
-> **🌸 Priya** · Powered by [Tavus](https://tavus.io) `phoenix-4.5` · Real-time video AI · Speaks · Listens · Adapts
+> **ðŸŒ¸ Priya** Â· Powered by [Tavus](https://tavus.io) `phoenix-4.5` Â· Real-time video AI Â· Speaks Â· Listens Â· Adapts
 
 <br/>
 
-[![🎙️ LAUNCH LIVE INTERVIEW WITH PRIYA →](https://img.shields.io/badge/🎙️%20LAUNCH%20LIVE%20INTERVIEW%20WITH%20PRIYA%20→-7C3AED?style=for-the-badge&labelColor=1a0533&color=7C3AED&logoColor=white)](https://interviewai-ten.vercel.app)
+[![ðŸŽ™ï¸ LAUNCH LIVE INTERVIEW WITH PRIYA â†’](https://img.shields.io/badge/ðŸŽ™ï¸%20LAUNCH%20LIVE%20INTERVIEW%20WITH%20PRIYA%20â†’-7C3AED?style=for-the-badge&labelColor=1a0533&color=7C3AED&logoColor=white)](https://interview-ai-n.vercel.app)
 
 <br/>
 
-> **No sign-up needed.** Click above → Priya appears on screen, greets you, and starts the interview live.
+> **No sign-up needed.** Click above â†’ Priya appears on screen, greets you, and starts the interview live.
 
 <br/>
 
-| 🎥 Live video avatar | Real-time WebRTC — she's on screen, face-to-face |
+| ðŸŽ¥ Live video avatar | Real-time WebRTC â€” she's on screen, face-to-face |
 |:---|:---|
-| 🎤 She actually hears you | Speaks and listens exactly like a real interviewer |
-| 🧠 Fully adaptive | Every follow-up question depends on your last answer |
-| 📊 Live scoring | Confidence · Clarity · Accuracy updated mid-session |
-| 🗺️ Post-session roadmap | Know exactly what to fix after every interview |
+| ðŸŽ¤ She actually hears you | Speaks and listens exactly like a real interviewer |
+| ðŸ§  Fully adaptive | Every follow-up question depends on your last answer |
+| ðŸ“Š Live scoring | Confidence Â· Clarity Â· Accuracy updated mid-session |
+| ðŸ—ºï¸ Post-session roadmap | Know exactly what to fix after every interview |
 
 <br/>
 
@@ -53,7 +53,7 @@
 
 ---
 
-## 📋 Table of Contents
+## ðŸ“‹ Table of Contents
 
 - [What is InterviewAI?](#-what-is-interviewai)
 - [Features](#-features)
@@ -73,60 +73,60 @@
 
 ---
 
-## 🎯 What is InterviewAI?
+## ðŸŽ¯ What is InterviewAI?
 
 **InterviewAI** is an AI-powered interview practice platform that uses **live photorealistic video avatars** (powered by [Tavus](https://tavus.io) `phoenix-4.5`) to simulate hyper-realistic interview experiences.
 
 Unlike text-based chatbots, InterviewAI's avatars:
 
-- 🗣️ **Speak aloud** in a natural human voice
-- 👁️ **Maintain eye contact** and realistic facial expressions
-- 🧠 **Adapt dynamically** — every follow-up depends on your last answer
-- 📊 **Score you in real-time** on Confidence · Clarity · Accuracy
-- 🗺️ **Generate personalised roadmaps** to fix your exact weak spots
+- ðŸ—£ï¸ **Speak aloud** in a natural human voice
+- ðŸ‘ï¸ **Maintain eye contact** and realistic facial expressions
+- ðŸ§  **Adapt dynamically** â€” every follow-up depends on your last answer
+- ðŸ“Š **Score you in real-time** on Confidence Â· Clarity Â· Accuracy
+- ðŸ—ºï¸ **Generate personalised roadmaps** to fix your exact weak spots
 
 ---
 
-## ✨ Features
+## âœ¨ Features
 
 | Feature | Description |
 |---|---|
-| 🎤 **Voice Interview** | Speak naturally; AI evaluates like a real panel |
-| 🤖 **Live AI Avatar (Priya)** | Photorealistic interviewer via Tavus phoenix-4.5 |
-| 📄 **Resume Review** | Strengths and gap analysis before you even start |
-| 💼 **LinkedIn Review** | See exactly how recruiters read your profile |
-| ⚡ **Adaptive Questions** | Every follow-up depends on what you just said |
-| 🏢 **Company-Specific** | Practice the exact format used by top companies |
-| 📈 **Progress Tracking** | Every session logged, scored, and compared |
-| 🗺️ **Weak Area Roadmaps** | Precise next steps — not generic advice |
-| 🤖 **AI Coach** | Always-on assistant reviewing cross-session patterns |
-| 📊 **Live Scoring** | Confidence, clarity and accuracy — updated mid-interview |
+| ðŸŽ¤ **Voice Interview** | Speak naturally; AI evaluates like a real panel |
+| ðŸ¤– **Live AI Avatar (Priya)** | Photorealistic interviewer via Tavus phoenix-4.5 |
+| ðŸ“„ **Resume Review** | Strengths and gap analysis before you even start |
+| ðŸ’¼ **LinkedIn Review** | See exactly how recruiters read your profile |
+| âš¡ **Adaptive Questions** | Every follow-up depends on what you just said |
+| ðŸ¢ **Company-Specific** | Practice the exact format used by top companies |
+| ðŸ“ˆ **Progress Tracking** | Every session logged, scored, and compared |
+| ðŸ—ºï¸ **Weak Area Roadmaps** | Precise next steps â€” not generic advice |
+| ðŸ¤– **AI Coach** | Always-on assistant reviewing cross-session patterns |
+| ðŸ“Š **Live Scoring** | Confidence, clarity and accuracy â€” updated mid-interview |
 
 ---
 
-## 🏗️ Architecture
+## ðŸ—ï¸ Architecture
 
 ```mermaid
 graph TB
-    subgraph Client["🌐 Next.js 16 Frontend (React 19)"]
+    subgraph Client["ðŸŒ Next.js 16 Frontend (React 19)"]
         LP[Landing Page Hero + Sections]
         DASH[Dashboard Progress and Analytics]
         EMB[TavusEmbed Web Component]
     end
 
-    subgraph API["⚡ Next.js API Routes"]
-        CONV["POST /api/tavus/conversation — Server-side session creator"]
+    subgraph API["âš¡ Next.js API Routes"]
+        CONV["POST /api/tavus/conversation â€” Server-side session creator"]
     end
 
-    subgraph Tavus["🤖 Tavus Platform"]
+    subgraph Tavus["ðŸ¤– Tavus Platform"]
         REP["Priya Replica r4dc9377a68e"]
         PER["Priya Persona pa588c2dce7b"]
-        PHX["phoenix-4.5 Model — Real-time video AI"]
+        PHX["phoenix-4.5 Model â€” Real-time video AI"]
     end
 
-    subgraph External["📦 External"]
+    subgraph External["ðŸ“¦ External"]
         CDN["unpkg CDN @tavus/embed"]
-        AI["Scoring Engine Confidence · Clarity · Accuracy"]
+        AI["Scoring Engine Confidence Â· Clarity Â· Accuracy"]
     end
 
     LP -->|"User clicks Talk to Priya"| EMB
@@ -143,36 +143,36 @@ graph TB
 
 ---
 
-## 🔄 How It Works — Sequence Diagram
+## ðŸ”„ How It Works â€” Sequence Diagram
 
 ```mermaid
 sequenceDiagram
-    participant U as 👤 User
-    participant UI as 🌐 Next.js App
-    participant API as ⚡ API Route
-    participant TV as 🤖 Tavus API
-    participant PR as 🌸 Priya phoenix-4.5
+    participant U as ðŸ‘¤ User
+    participant UI as ðŸŒ Next.js App
+    participant API as âš¡ API Route
+    participant TV as ðŸ¤– Tavus API
+    participant PR as ðŸŒ¸ Priya phoenix-4.5
 
     U->>UI: Clicks Talk to Priya
     UI->>API: POST /api/tavus/conversation
-    Note over API: TAVUS_API_KEY stays server-side — never exposed
+    Note over API: TAVUS_API_KEY stays server-side â€” never exposed
     API->>TV: POST /v2/conversations with replica_id and persona_id
     TV->>PR: Spin up live session
     PR-->>TV: conversation_url ready
     TV-->>API: conversation_id and conversation_url
     API-->>UI: Returns session URL only
     UI->>PR: WebRTC handshake via @tavus/embed
-    PR-->>U: 🎥 Live video stream begins
-    U->>PR: 🎤 Speaks answer
-    PR->>U: 🤔 Adaptive follow-up question
-    PR->>UI: 📊 Real-time scoring events
+    PR-->>U: ðŸŽ¥ Live video stream begins
+    U->>PR: ðŸŽ¤ Speaks answer
+    PR->>U: ðŸ¤” Adaptive follow-up question
+    PR->>UI: ðŸ“Š Real-time scoring events
     UI->>U: Live confidence and clarity and accuracy scores
-    Note over PR,UI: Max session 10 min — Closed captions ON
+    Note over PR,UI: Max session 10 min â€” Closed captions ON
 ```
 
 ---
 
-## 🔄 User Journey — 5 Steps to Confidence
+## ðŸ”„ User Journey â€” 5 Steps to Confidence
 
 ```mermaid
 flowchart LR
@@ -197,15 +197,15 @@ flowchart LR
 
 ---
 
-## 🤖 AI Interviewers
+## ðŸ¤– AI Interviewers
 
 ```mermaid
 graph LR
-    subgraph Panel["🎭 AI Interview Panel"]
-        PR["🌸 Priya\nLive Video Avatar\nTavus phoenix-4.5\nGeneral Practice and Onboarding"]
-        AL["🔵 Alex\nFrontend Engineering Lead\nReact - State Mgmt\nPerformance - Deep dives"]
-        SA["💜 Sarah\nBehavioral and Leadership\nPressure - Communication\nAmbiguity - Team dynamics"]
-        MI["🟢 Michael\nSystems and Backend\nArchitecture - Scalability\nTrade-offs - System design"]
+    subgraph Panel["ðŸŽ­ AI Interview Panel"]
+        PR["ðŸŒ¸ Priya\nLive Video Avatar\nTavus phoenix-4.5\nGeneral Practice and Onboarding"]
+        AL["ðŸ”µ Alex\nFrontend Engineering Lead\nReact - State Mgmt\nPerformance - Deep dives"]
+        SA["ðŸ’œ Sarah\nBehavioral and Leadership\nPressure - Communication\nAmbiguity - Team dynamics"]
+        MI["ðŸŸ¢ Michael\nSystems and Backend\nArchitecture - Scalability\nTrade-offs - System design"]
     end
 
     style PR fill:#7c3aed33,stroke:#7c3aed,color:#c4b5fd
@@ -214,11 +214,11 @@ graph LR
     style MI fill:#34d39933,stroke:#34d399,color:#a7f3d0
 ```
 
-> **Priya** is the only fully photorealistic, real-time video AI — she literally sees and speaks with you via WebRTC.
+> **Priya** is the only fully photorealistic, real-time video AI â€” she literally sees and speaks with you via WebRTC.
 
 ---
 
-## 👥 Who Is It For?
+## ðŸ‘¥ Who Is It For?
 
 ```mermaid
 mindmap
@@ -242,29 +242,29 @@ mindmap
 
 ---
 
-## 🧩 Tech Stack
+## ðŸ§© Tech Stack
 
 ```mermaid
 graph TB
-    subgraph FE["🎨 Frontend"]
+    subgraph FE["ðŸŽ¨ Frontend"]
         NX["Next.js 16.2.9 App Router"]
         RC["React 19"]
         TS["TypeScript 5"]
         TW["Tailwind CSS 4"]
-        FM["Framer Motion 12 — Micro-animations"]
-        GS["GSAP 3 — Scroll animations"]
-        THR["Three.js r185 — 3D particle backgrounds"]
+        FM["Framer Motion 12 â€” Micro-animations"]
+        GS["GSAP 3 â€” Scroll animations"]
+        THR["Three.js r185 â€” 3D particle backgrounds"]
     end
 
-    subgraph AI["🤖 AI and Avatar Layer"]
+    subgraph AI["ðŸ¤– AI and Avatar Layer"]
         TVS["Tavus Platform phoenix-4.5"]
         EMB["@tavus/embed Custom Web Component"]
         WRT["WebRTC Live video and audio"]
     end
 
-    subgraph INF["🏗️ Infrastructure"]
+    subgraph INF["ðŸ—ï¸ Infrastructure"]
         VRL["Vercel Deployment"]
-        ENV["Next.js API Routes — Server-side API key guard"]
+        ENV["Next.js API Routes â€” Server-side API key guard"]
     end
 
     NX --> RC --> TS
@@ -278,59 +278,59 @@ graph TB
 
 ---
 
-## 📁 Project Structure
+## ðŸ“ Project Structure
 
 ```
 interview-ai/
-├── src/
-│   ├── app/
-│   │   ├── api/
-│   │   │   └── tavus/
-│   │   │       └── conversation/
-│   │   │           └── route.ts        ← Server-side Tavus session creator
-│   │   ├── dashboard/
-│   │   │   └── page.tsx                ← User progress dashboard
-│   │   ├── login/                      ← Auth pages
-│   │   ├── register/
-│   │   ├── onboarding/                 ← Onboarding flow
-│   │   ├── layout.tsx
-│   │   └── page.tsx                    ← Landing page assembly
-│   │
-│   └── components/
-│       ├── sections/
-│       │   ├── Hero.tsx                ← Main hero with Priya embed
-│       │   ├── TavusEmbed.tsx          ← Tavus web component wrapper
-│       │   ├── Features.tsx            ← 8-feature grid
-│       │   ├── HowItWorks.tsx          ← 5-step GSAP timeline
-│       │   ├── ForWhom.tsx             ← Audience cards
-│       │   ├── AIInterviewers.tsx      ← Interviewer profiles
-│       │   ├── Pricing.tsx             ← 3-tier pricing
-│       │   ├── Testimonials.tsx        ← Social proof
-│       │   ├── SkillsTracker.tsx       ← Skills visualization
-│       │   ├── AnalyticsPreview.tsx    ← Dashboard preview
-│       │   ├── CareerCategories.tsx    ← Exam/career categories
-│       │   ├── Interviewshowcase.tsx   ← Live demo showcase
-│       │   ├── ThreeBackground.tsx     ← Three.js particle bg
-│       │   ├── Navbar.tsx              ← Navigation
-│       │   └── Footer.tsx              ← Footer
-│       │
-│       └── ui/
-│           ├── PriyaLiveAvatar.tsx     ← Priya portrait component
-│           ├── Button.tsx
-│           ├── Container.tsx
-│           └── Eyebrow.tsx
-│
-├── public/
-├── avatar-engine/
-├── tavus-interviewer/
-├── .env.local                          ← Environment variables (git-ignored)
-├── next.config.ts
-└── package.json
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ app/
+â”‚   â”‚   â”œâ”€â”€ api/
+â”‚   â”‚   â”‚   â””â”€â”€ tavus/
+â”‚   â”‚   â”‚       â””â”€â”€ conversation/
+â”‚   â”‚   â”‚           â””â”€â”€ route.ts        â† Server-side Tavus session creator
+â”‚   â”‚   â”œâ”€â”€ dashboard/
+â”‚   â”‚   â”‚   â””â”€â”€ page.tsx                â† User progress dashboard
+â”‚   â”‚   â”œâ”€â”€ login/                      â† Auth pages
+â”‚   â”‚   â”œâ”€â”€ register/
+â”‚   â”‚   â”œâ”€â”€ onboarding/                 â† Onboarding flow
+â”‚   â”‚   â”œâ”€â”€ layout.tsx
+â”‚   â”‚   â””â”€â”€ page.tsx                    â† Landing page assembly
+â”‚   â”‚
+â”‚   â””â”€â”€ components/
+â”‚       â”œâ”€â”€ sections/
+â”‚       â”‚   â”œâ”€â”€ Hero.tsx                â† Main hero with Priya embed
+â”‚       â”‚   â”œâ”€â”€ TavusEmbed.tsx          â† Tavus web component wrapper
+â”‚       â”‚   â”œâ”€â”€ Features.tsx            â† 8-feature grid
+â”‚       â”‚   â”œâ”€â”€ HowItWorks.tsx          â† 5-step GSAP timeline
+â”‚       â”‚   â”œâ”€â”€ ForWhom.tsx             â† Audience cards
+â”‚       â”‚   â”œâ”€â”€ AIInterviewers.tsx      â† Interviewer profiles
+â”‚       â”‚   â”œâ”€â”€ Pricing.tsx             â† 3-tier pricing
+â”‚       â”‚   â”œâ”€â”€ Testimonials.tsx        â† Social proof
+â”‚       â”‚   â”œâ”€â”€ SkillsTracker.tsx       â† Skills visualization
+â”‚       â”‚   â”œâ”€â”€ AnalyticsPreview.tsx    â† Dashboard preview
+â”‚       â”‚   â”œâ”€â”€ CareerCategories.tsx    â† Exam/career categories
+â”‚       â”‚   â”œâ”€â”€ Interviewshowcase.tsx   â† Live demo showcase
+â”‚       â”‚   â”œâ”€â”€ ThreeBackground.tsx     â† Three.js particle bg
+â”‚       â”‚   â”œâ”€â”€ Navbar.tsx              â† Navigation
+â”‚       â”‚   â””â”€â”€ Footer.tsx              â† Footer
+â”‚       â”‚
+â”‚       â””â”€â”€ ui/
+â”‚           â”œâ”€â”€ PriyaLiveAvatar.tsx     â† Priya portrait component
+â”‚           â”œâ”€â”€ Button.tsx
+â”‚           â”œâ”€â”€ Container.tsx
+â”‚           â””â”€â”€ Eyebrow.tsx
+â”‚
+â”œâ”€â”€ public/
+â”œâ”€â”€ avatar-engine/
+â”œâ”€â”€ tavus-interviewer/
+â”œâ”€â”€ .env.local                          â† Environment variables (git-ignored)
+â”œâ”€â”€ next.config.ts
+â””â”€â”€ package.json
 ```
 
 ---
 
-## 🚀 Getting Started
+## ðŸš€ Getting Started
 
 ### Prerequisites
 
@@ -353,7 +353,7 @@ npm install
 ### 3. Configure `.env.local`
 
 ```env
-# Server-side only — never expose this to the client
+# Server-side only â€” never expose this to the client
 TAVUS_API_KEY=your_tavus_api_key_here
 
 # Priya identifiers (safe to expose as NEXT_PUBLIC_)
@@ -367,7 +367,7 @@ NEXT_PUBLIC_TAVUS_PERSONA_ID=pa588c2dce7b
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) — Priya will be live!
+Open [http://localhost:3000](http://localhost:3000) â€” Priya will be live!
 
 ### 5. Build for Production
 
@@ -378,9 +378,9 @@ npm start
 
 ---
 
-## 🔌 Tavus Avatar Embed Code
+## ðŸ”Œ Tavus Avatar Embed Code
 
-### Plain HTML — works on any website
+### Plain HTML â€” works on any website
 
 ```html
 <!-- Load Tavus embed script once per page -->
@@ -422,7 +422,7 @@ import { TavusEmbed } from "@/components/sections/TavusEmbed";
 
 ---
 
-## 📊 Scoring System
+## ðŸ“Š Scoring System
 
 ```mermaid
 graph LR
@@ -448,7 +448,7 @@ graph LR
 
 ---
 
-## 💰 Pricing
+## ðŸ’° Pricing
 
 | Plan | Price | Interviews | Highlights |
 |---|---|---|---|
@@ -458,11 +458,11 @@ graph LR
 
 ---
 
-## 🌐 Environment Variables
+## ðŸŒ Environment Variables
 
 | Variable | Required | Client-Safe | Description |
 |---|---|---|---|
-| `TAVUS_API_KEY` | Yes | No — server only | Your Tavus platform API key |
+| `TAVUS_API_KEY` | Yes | No â€” server only | Your Tavus platform API key |
 | `NEXT_PUBLIC_TAVUS_REPLICA_ID` | Yes | Yes | Priya replica ID (phoenix-4.5) |
 | `NEXT_PUBLIC_TAVUS_PERSONA_ID` | Yes | Yes | Priya persona/character ID |
 
@@ -470,7 +470,7 @@ graph LR
 
 ---
 
-## 🤝 Contributing
+## ðŸ¤ Contributing
 
 ```bash
 git checkout -b feat/your-feature
@@ -486,7 +486,7 @@ Commit convention: `feat:` `fix:` `docs:` `chore:` `refactor:`
 
 **Stop reading. Start practicing.**
 
-[![Talk to Priya Now](https://img.shields.io/badge/%F0%9F%8C%B8%20Talk%20to%20Priya%20Now%20%E2%86%92-7C3AED?style=for-the-badge&labelColor=1a0533&color=7C3AED)](https://interview-ai.vercel.app)
+[![Talk to Priya Now](https://img.shields.io/badge/%F0%9F%8C%B8%20Talk%20to%20Priya%20Now%20%E2%86%92-7C3AED?style=for-the-badge&labelColor=1a0533&color=7C3AED)](https://interview-ai-n.vercel.app)
 
 *Built for students, job seekers and professionals who refuse to walk into an interview unprepared.*
 
