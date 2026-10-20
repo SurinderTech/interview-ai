@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=40&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=700&height=80&lines=InterviewAI+%F0%9F%A4%96;Practice+interviews+with+AI;Land+your+dream+job!" alt="InterviewAI" />
 
@@ -18,27 +18,34 @@
 
 ---
 
-## 🎙️ Talk to Priya — Your Live AI Interviewer
+## 🎙️ Meet Priya — Your Live AI Interviewer
 
 <div align="center">
 
 <br/>
 
-[![Talk to Priya — Live AI Interview](https://img.shields.io/badge/%F0%9F%8E%99%EF%B8%8F%20%20TALK%20TO%20PRIYA%20%E2%80%94%20LIVE%20AI%20INTERVIEW%20%E2%86%92-7C3AED?style=for-the-badge&labelColor=1a0533&color=7C3AED)](https://interview-ai.vercel.app)
+<img src="https://cdn.replica.tavus.io/61269/thumbnail.jpg" alt="Priya — AI Interviewer" width="340" style="border-radius:24px; box-shadow: 0 0 60px #7c3aed55;" />
+
+<br/><br/>
+
+> **🌸 Priya** · Powered by [Tavus](https://tavus.io) `phoenix-4.5` · Real-time video AI · Speaks · Listens · Adapts
 
 <br/>
 
-> **No sign-up needed. Click the button → Priya greets you live via webcam and mic.**
-> She speaks. She listens. She adapts. Powered by [Tavus](https://tavus.io) `phoenix-4.5`.
+[![🎙️ LAUNCH LIVE INTERVIEW WITH PRIYA →](https://img.shields.io/badge/🎙️%20LAUNCH%20LIVE%20INTERVIEW%20WITH%20PRIYA%20→-7C3AED?style=for-the-badge&labelColor=1a0533&color=7C3AED&logoColor=white)](https://interviewai-ten.vercel.app)
 
 <br/>
 
-| | |
-|:---:|:---:|
-| 🎥 **Live video avatar** | Real-time WebRTC face-to-face |
-| 🎤 **She hears you** | Speaks and listens like a real interviewer |
-| 🧠 **Fully adaptive** | Every follow-up based on your last answer |
-| 📊 **Live scoring** | Confidence · Clarity · Accuracy — mid-session |
+> **No sign-up needed.** Click above → Priya appears on screen, greets you, and starts the interview live.
+
+<br/>
+
+| 🎥 Live video avatar | Real-time WebRTC — she's on screen, face-to-face |
+|:---|:---|
+| 🎤 She actually hears you | Speaks and listens exactly like a real interviewer |
+| 🧠 Fully adaptive | Every follow-up question depends on your last answer |
+| 📊 Live scoring | Confidence · Clarity · Accuracy updated mid-session |
+| 🗺️ Post-session roadmap | Know exactly what to fix after every interview |
 
 <br/>
 
