@@ -8,10 +8,6 @@ InterviewAI is an AI-powered mock interview platform that helps students and pro
 
 ###  Speech Recognition
 
-* Real-time speech-to-text
-* Voice interaction
-* Live transcript generation
-
 ### 📊 Performance Analytics
 
 * Technical score
