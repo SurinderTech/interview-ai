@@ -1,7 +1,6 @@
 #  InterviewAI
 
-*
-rd
+
 
 ---
 
