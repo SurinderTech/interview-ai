@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=700&height=70&lines=InterviewAI;AI+Mock+Interviews+with+Live+Avatar;Land+Your+Dream+Job!" alt="InterviewAI" />
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=36&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=700&height=70&lines=InterviewAI;Practice+with+a+Live+AI+Interviewer;Land+Your+Dream+Job!" alt="InterviewAI" />
 
 <br/>
 
@@ -18,7 +18,40 @@
 
 ---
 
-## Meet the AI Interviewers
+## Talk to Priya Live — Right Now
+
+<div align="center">
+<br/>
+
+<a href="https://interview-ai-n.vercel.app" target="_blank">
+  <img src="https://raw.githubusercontent.com/SurinderTech/interview-ai/main/public/media/priya-avatar.jpg" width="300" alt="Priya - Click to talk live" style="border-radius:20px;cursor:pointer;" />
+</a>
+
+<br/><br/>
+
+### Priya (प्रिया) — AI Interviewer · Tavus phoenix-4.5
+
+> She is **online right now**. Click her photo or the button below to start a real interview — no sign-up needed.
+
+<br/>
+
+[![TALK TO PRIYA LIVE NOW](https://img.shields.io/badge/%F0%9F%8E%99%EF%B8%8F%20%20TALK%20TO%20PRIYA%20LIVE%20NOW%20%E2%86%92-7C3AED?style=for-the-badge&labelColor=0d0018&color=7C3AED)](https://interview-ai-n.vercel.app)
+
+<br/>
+
+| | |
+|:---|:---|
+| Live video + audio | Real-time WebRTC — face to face |
+| Adaptive questions | Every follow-up based on what you just said |
+| Live scoring | Confidence, Clarity, Accuracy updated mid-session |
+| Post-session roadmap | Know exactly what to fix |
+
+<br/>
+</div>
+
+---
+
+## Meet All 3 AI Interviewers
 
 <div align="center">
 <br/>
@@ -26,39 +59,35 @@
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="https://raw.githubusercontent.com/SurinderTech/interview-ai/main/public/media/priya-avatar.jpg" width="220" alt="Priya" style="border-radius:20px" />
+      <a href="https://interview-ai-n.vercel.app">
+        <img src="https://raw.githubusercontent.com/SurinderTech/interview-ai/main/public/media/priya-avatar.jpg" width="200" alt="Priya" style="border-radius:16px" />
+      </a>
       <br/><br/>
-      <strong>Priya</strong><br/>
-      <em>Career and Tech Interviews</em><br/>
+      <strong>Priya (प्रिया)</strong><br/>
+      <sub>Career and Tech Interviews</sub><br/>
       <sub>Powered by Tavus phoenix-4.5</sub><br/><br/>
-      <img src="https://img.shields.io/badge/LIVE%20VIDEO%20AI-7C3AED?style=flat-square&labelColor=1a0533" />
+      <img src="https://img.shields.io/badge/LIVE%20VIDEO%20AI-7C3AED?style=flat-square&labelColor=1a0533" alt="live" />
     </td>
     <td align="center" width="33%">
-      <img src="https://raw.githubusercontent.com/SurinderTech/interview-ai/main/public/media/Confident%20Corporate%20Woman%20in%20Modern%20Office.png" width="220" alt="Ananya" style="border-radius:20px" />
+      <img src="https://raw.githubusercontent.com/SurinderTech/interview-ai/main/public/media/ananya-avatar.jpg" width="200" alt="Ananya" style="border-radius:16px" />
       <br/><br/>
-      <strong>Ananya</strong><br/>
-      <em>Exam Mentor — JEE, NEET, UPSC</em><br/>
+      <strong>Ananya (अनन्या)</strong><br/>
+      <sub>Exam Mentor — JEE, NEET, UPSC</sub><br/>
       <sub>Adaptive question sessions</sub><br/><br/>
-      <img src="https://img.shields.io/badge/EXAM%20SPECIALIST-818cf8?style=flat-square&labelColor=0f1133" />
+      <img src="https://img.shields.io/badge/EXAM%20SPECIALIST-818cf8?style=flat-square&labelColor=0f1133" alt="exam" />
     </td>
     <td align="center" width="33%">
-      <br/><br/><br/><br/>
-      <strong>Kavya</strong><br/>
-      <em>Guidance and Study Coach</em><br/>
+      <img src="https://raw.githubusercontent.com/SurinderTech/interview-ai/main/public/media/kavya-avatar.jpg" width="200" alt="Kavya" style="border-radius:16px" />
+      <br/><br/>
+      <strong>Kavya (काव्या)</strong><br/>
+      <sub>Guidance and Study Coach</sub><br/>
       <sub>Clarity, confidence and roadmaps</sub><br/><br/>
-      <img src="https://img.shields.io/badge/STUDY%20COACH-f472b6?style=flat-square&labelColor=1a0020" />
+      <img src="https://img.shields.io/badge/STUDY%20COACH-f472b6?style=flat-square&labelColor=1a0020" alt="coach" />
     </td>
   </tr>
 </table>
 
 <br/>
-
-[![LAUNCH LIVE INTERVIEW WITH PRIYA](https://img.shields.io/badge/LAUNCH%20LIVE%20INTERVIEW%20WITH%20PRIYA%20%E2%86%92-7C3AED?style=for-the-badge&labelColor=0d0018&color=7C3AED)](https://interview-ai-n.vercel.app)
-
-<br/>
-
-**No sign-up needed.** Click above — Priya appears on screen and the interview starts live.
-
 </div>
 
 ---
@@ -86,10 +115,10 @@
 **InterviewAI** uses **live photorealistic video avatars** (Tavus phoenix-4.5) to simulate hyper-realistic interview experiences.
 
 - Speaks aloud in a natural human voice
-- Maintains eye contact and realistic facial expressions  
+- Maintains eye contact and realistic facial expressions
 - Adapts dynamically — every follow-up depends on your last answer
-- Scores you in real-time on Confidence, Clarity and Accuracy
-- Generates personalised roadmaps to fix your exact weak spots
+- Scores in real-time on Confidence, Clarity and Accuracy
+- Generates personalised roadmaps after every session
 
 ---
 
@@ -98,9 +127,9 @@
 | Feature | Description |
 |---|---|
 | Voice Interview | Speak naturally; AI evaluates like a real panel |
-| Live AI Avatar (Priya) | Photorealistic interviewer via Tavus phoenix-4.5 |
+| Live AI Avatar (Priya) | Photorealistic via Tavus phoenix-4.5 |
 | Resume Review | Strengths and gap analysis before you start |
-| LinkedIn Review | See exactly how recruiters read your profile |
+| LinkedIn Review | See how recruiters read your profile |
 | Adaptive Questions | Every follow-up depends on what you just said |
 | Company-Specific Prep | Practice the exact format used by top companies |
 | Progress Tracking | Every session logged, scored and compared |
@@ -132,11 +161,10 @@ graph TB
 
     LP -->|"User clicks Talk to Priya"| EMB
     EMB -->|"POST session"| CONV
-    CONV -->|"x-api-key header"| Tavus
+    CONV -->|"x-api-key server only"| Tavus
     REP --> PHX
     PER --> PHX
     PHX -->|"WebRTC stream"| EMB
-    EMB -->|"Live video and audio"| LP
     PHX -->|"Scores and transcript"| DASH
 ```
 
@@ -235,22 +263,23 @@ graph LR
 interview-ai/
 ├── src/
 │   ├── app/
-│   │   ├── api/tavus/conversation/route.ts   ← Session creator
-│   │   ├── dashboard/page.tsx                ← Progress dashboard
+│   │   ├── api/tavus/conversation/route.ts   <- Server-side session creator
+│   │   ├── dashboard/page.tsx                <- Progress dashboard
 │   │   ├── login/ register/ onboarding/
-│   │   └── page.tsx                          ← Landing page
+│   │   └── page.tsx                          <- Landing page
 │   └── components/
 │       ├── sections/
-│       │   ├── Hero.tsx                      ← Hero + Priya embed
-│       │   ├── TavusEmbed.tsx                ← Tavus web component
+│       │   ├── Hero.tsx                      <- Hero with Priya, Ananya, Kavya
+│       │   ├── TavusEmbed.tsx                <- Tavus web component
 │       │   ├── HowItWorks.tsx
 │       │   ├── Features.tsx
 │       │   └── Pricing.tsx
 │       └── ui/
 │           └── PriyaLiveAvatar.tsx
 └── public/media/
-    ├── priya-avatar.jpg                      ← Priya (Tavus replica)
-    └── Confident Corporate Woman...png       ← Ananya
+    ├── priya-avatar.jpg                      <- Priya (Tavus replica thumbnail)
+    ├── ananya-avatar.jpg                     <- Ananya (AI generated)
+    └── kavya-avatar.jpg                      <- Kavya (AI generated)
 ```
 
 ---
@@ -292,7 +321,7 @@ Open [http://localhost:3000](http://localhost:3000)
 ></tavus-embed>
 ```
 
-### React
+### React / Next.js
 
 ```tsx
 import { TavusEmbed } from "@/components/sections/TavusEmbed";
@@ -332,6 +361,8 @@ import { TavusEmbed } from "@/components/sections/TavusEmbed";
 | `NEXT_PUBLIC_TAVUS_REPLICA_ID` | No | Priya replica ID |
 | `NEXT_PUBLIC_TAVUS_PERSONA_ID` | No | Priya persona ID |
 
+> `TAVUS_API_KEY` is handled server-side in `/api/tavus/conversation` and never sent to the browser.
+
 ---
 
 ## Contributing
@@ -350,7 +381,7 @@ Commit convention: `feat` `fix` `docs` `chore` `refactor`
 
 **Stop reading. Start practicing.**
 
-[![Talk to Priya Now](https://img.shields.io/badge/Talk%20to%20Priya%20Now%20%E2%86%92-7C3AED?style=for-the-badge&labelColor=0d0018&color=7C3AED)](https://interview-ai-n.vercel.app)
+[![Talk to Priya Now](https://img.shields.io/badge/Talk%20to%20Priya%20Live%20Now%20%E2%86%92-7C3AED?style=for-the-badge&labelColor=0d0018&color=7C3AED)](https://interview-ai-n.vercel.app)
 
 *Built for students, job seekers and professionals who refuse to walk into an interview unprepared.*
 
