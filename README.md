@@ -1,18 +1,6 @@
 #  InterviewAI
 
-* Technical score
-* Communication score
-* Confidence analysis
-* Fluency insights
-* Interview summary
-
-###  AI Feedback
-
-* Strengths
-* Weaknesses
-* Improvement suggestions
-* Personalized recommendations
-
+*
 rd
 
 ---
