@@ -1,13 +1,5 @@
 #  InterviewAI
 
-
-
-
-
-###  Speech Recognition
-
-### 📊 Performance Analytics
-
 * Technical score
 * Communication score
 * Confidence analysis
