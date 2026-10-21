@@ -8,8 +8,8 @@ import { TavusEmbed } from "./TavusEmbed";
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 /* ─── Tavus config ────────────────────────────────────────────────── */
-const TAVUS_DEPLOYMENT_ID = "d52984b7-a661-42b8-a956-69ac7d268d1d";
-const TAVUS_PERSONA_ID = process.env.NEXT_PUBLIC_TAVUS_PERSONA_ID ?? "p53a92c4a242";
+// Priya's IDs are managed server-side in /api/tavus/conversation
+// No deployment ID or persona ID needed here — TavusEmbed handles it.
 
 /* ─── Avatar personas ─────────────────────────────────────────────── */
 const AVATARS = [
@@ -286,8 +286,6 @@ export function Hero() {
                     style={{ minHeight: "540px" }}
                   >
                     <TavusEmbed
-                      deploymentId={TAVUS_DEPLOYMENT_ID}
-                      personaId={TAVUS_PERSONA_ID}
                       className="h-full w-full"
                       style={{ minHeight: "540px" }}
                     />

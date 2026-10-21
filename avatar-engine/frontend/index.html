@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ritika Avatar Engine – independent 3D mesh viewer and animation prototype for InterviewAI.">
+  <title>Ritika Avatar Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #080e1c;
+      --surface: #0f172a;
+      --panel:   #111827;
+      --border:  #1e2d4a;
+      --border2: #2a3d60;
+      --text:    #e2eaff;
+      --muted:   #8a9dc0;
+      --accent:  #6656df;
+      --accent2: #8877ff;
+      --ok:      #22c55e;
+      --warn:    #f59e0b;
+      --err:     #ef4444;
+      --radius:  12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 100dvh;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .logo {
+      width: 34px; height: 34px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; flex-shrink: 0;
+    }
+    header h1 { font-size: 17px; font-weight: 600; letter-spacing: -.3px; }
+    header p  { font-size: 12px; color: var(--muted); }
+
+    /* Layout */
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 298px;
+      gap: 14px;
+      padding: 14px;
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    /* 3-D stage */
+    #stage {
+      height: min(78vh, 780px);
+      min-height: 440px;
+      position: relative;
+      background: radial-gradient(ellipse at 50% 30%, #18264a 0%, #090f1e 70%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    canvas { display: block; width: 100%; height: 100%; }
+
+    .stage-badge {
+      position: absolute;
+      left: 12px; top: 12px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: rgba(8,14,28,.78);
+      backdrop-filter: blur(5px);
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: .05em;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Loading overlay */
+    #loadOverlay {
+      display: none;
+      position: absolute;
+      inset: 0;
+      background: rgba(8,14,28,.75);
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    #loadOverlay.active { display: flex; }
+    .spinner {
+      width: 34px; height: 34px;
+      border: 3px solid var(--border2);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Panel */
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .panel-section-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      margin: 10px 0 6px;
+    }
+    .panel-section-title:first-child { margin-top: 0; }
+
+    /* Upload */
+    .upload-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px dashed var(--border2);
+      border-radius: 9px;
+      background: rgba(102,86,223,.06);
+      color: var(--accent2);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background .15s, border-color .15s;
+    }
+    .upload-label:hover { background: rgba(102,86,223,.14); border-color: var(--accent); }
+    input[type=file] { display: none; }
+
+    /* Buttons */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      padding: 9px 11px;
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      background: #182038;
+      color: var(--text);
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background .15s, border-color .15s, transform .1s;
+    }
+    .btn:hover  { background: #1e2d50; border-color: #3a5080; }
+    .btn:active { transform: scale(.98); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); }
+    .btn.primary:hover { background: var(--accent2); border-color: var(--accent2); }
+    .btn.danger  { background: #2e1414; border-color: #6b2020; color: #ff8888; }
+    .btn.danger:hover { background: #3d1a1a; }
+
+    .btn-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    /* Sep */
+    .sep { border: none; border-top: 1px solid var(--border); margin: 8px 0; }
+
+    /* Rotation controls */
+    .rot-grid {
+      display: grid;
+      grid-template-columns: 22px 1fr 38px;
+      align-items: center;
+      gap: 5px 6px;
+      background: #0c1626;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 10px 11px;
+    }
+    .axis-lbl { font-size: 12px; font-weight: 600; text-align: center; color: var(--muted); }
+    .axis-lbl.x { color: #f87171; }
+    .axis-lbl.y { color: #4ade80; }
+    .axis-lbl.z { color: #60a5fa; }
+    .deg-val { font-size: 11px; color: var(--muted); text-align: right; }
+
+    input[type=range] {
+      -webkit-appearance: none; appearance: none;
+      width: 100%; height: 4px;
+      border-radius: 2px;
+      background: var(--border2);
+      outline: none; cursor: pointer;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 13px; height: 13px;
+      border-radius: 50%;
+      background: var(--accent2);
+      cursor: pointer;
+    }
+    .rx::-webkit-slider-thumb { background: #f87171; }
+    .ry::-webkit-slider-thumb { background: #4ade80; }
+    .rz::-webkit-slider-thumb { background: #60a5fa; }
+
+    /* Status / cap boxes */
+    #status, #capBox {
+      font-size: 12px;
+      line-height: 1.65;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      background: #090e1c;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+    #status { min-height: 46px; }
+    .ok   { color: var(--ok);   }
+    .warn { color: var(--warn); }
+    .err  { color: var(--err);  }
+    .cap-yes { color: var(--ok);   font-weight: 500; }
+    .cap-no  { color: var(--warn); }
+
+    .hint {
+      font-size: 11px;
+      color: #4a5e80;
+      text-align: center;
+      padding-top: 6px;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      main { grid-template-columns: 1fr; }
+      #stage { height: 58vh; min-height: 360px; }
+    }
+  </style>
+  <script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.0/examples/jsm/"}}
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="logo" aria-hidden="true">🎭</div>
+    <div>
+      <h1>Ritika Avatar Engine</h1>
+      <p>Independent 3D rendering prototype · InterviewAI</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- 3-D viewport -->
+    <section id="stage" aria-label="3D avatar viewport">
+      <div class="stage-badge" id="stageBadge">PROTOTYPE · 3D VIEWPORT</div>
+      <div id="loadOverlay" role="status" aria-live="polite">
+        <div class="spinner"></div>
+        <span id="loadMsg">Loading model…</span>
+      </div>
+    </section>
+
+    <!-- Control panel -->
+    <aside class="panel" aria-label="Avatar controls">
+
+      <p class="panel-section-title">Model</p>
+      <button class="btn primary" id="loadRitikaGlbBtn" style="margin-bottom:8px">✨ Load Ritika Avatar (ritika.glb)</button>
+      <label class="upload-label" for="modelFile">
+        📂 Upload Custom .glb / .gltf
+      </label>
+      <input id="modelFile" type="file"
+             accept=".glb,.gltf,model/gltf-binary,model/gltf+json"
+             aria-label="Upload GLB or GLTF model file">
+
+      <hr class="sep">
+      <p class="panel-section-title">Camera</p>
+      <button class="btn" id="resetCamera">⟳ Reset camera</button>
+
+      <hr class="sep">
+      <p class="panel-section-title">Orientation</p>
+      <p style="font-size:11px;color:var(--muted);margin-bottom:8px;line-height:1.5">
+        TripoSR outputs may load sideways. Adjust sliders to correct orientation.
+      </p>
+      <div class="rot-grid">
+        <span class="axis-lbl x">X</span>
+        <input type="range" id="rotX" class="rx" min="-180" max="180" value="0" step="5"
+               aria-label="Rotate model around X axis">
+        <span class="deg-val" id="rotXVal">0°</span>
+
+        <span class="axis-lbl y">Y</span>
+        <input type="range" id="rotY" class="ry" min="-180" max="180" value="0" step="5"
+               aria-label="Rotate model around Y axis">
+        <span class="deg-val" id="rotYVal">0°</span>
+
+        <span class="axis-lbl z">Z</span>
+        <input type="range" id="rotZ" class="rz" min="-180" max="180" value="0" step="5"
+               aria-label="Rotate model around Z axis">
+        <span class="deg-val" id="rotZVal">0°</span>
+      </div>
+      <div class="btn-row" style="margin-top:6px">
+        <button class="btn" id="resetOrientation">↺ Reset orientation</button>
+        <button class="btn" id="reframe">⊡ Reframe camera</button>
+      </div>
+
+      <hr class="sep">
+      <p class="panel-section-title">Speech demo</p>
+      <div class="btn-row">
+        <button class="btn primary" id="speak">▶ Play</button>
+        <button class="btn danger"  id="stopSpeech">■ Stop</button>
+      </div>
+
+      <hr class="sep">
+      <p class="panel-section-title">Engine status</p>
+      <div id="status" role="status" aria-live="polite">Initialising…</div>
+
+      <hr class="sep">
+      <p class="panel-section-title">Model capabilities</p>
+      <div id="capBox" aria-live="polite">
+        <div>Skeleton: <span id="capSkel" class="cap-no">–</span></div>
+        <div>Morph targets: <span id="capMorph" class="cap-no">–</span></div>
+        <div>Lip-sync: <span id="capLip" class="cap-no">–</span></div>
+      </div>
+
+      <p class="hint">Drag to orbit · Scroll to zoom</p>
+    </aside>
+  </main>
+
+  <script type="module">
+    import * as THREE        from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader }    from 'three/addons/loaders/GLTFLoader.js';
+
+    // ─── Scene setup ────────────────────────────────────────────────────────────
+    const stage = document.getElementById('stage');
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color('#090f1e');
+
+    const camera = new THREE.PerspectiveCamera(34, 1, 0.01, 200);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.outputColorSpace   = THREE.SRGBColorSpace;
+    renderer.toneMapping        = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.2;
+    stage.appendChild(renderer.domElement);
+
+    // Lighting
+    scene.add(new THREE.HemisphereLight(0xdce8ff, 0x182030, 2.2));
+    const key = new THREE.DirectionalLight(0xffe4ce, 3.5);
+    key.position.set(3, 5, 5);
+    scene.add(key);
+    const rim = new THREE.DirectionalLight(0x8090ff, 1.8);
+    rim.position.set(-4, 3, -3);
+    scene.add(rim);
+    const fill = new THREE.DirectionalLight(0xffffff, 0.5);
+    fill.position.set(0, -2, 4);
+    scene.add(fill);
+
+    // OrbitControls
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.07;
+    controls.minDistance   = 0.3;
+    controls.maxDistance   = 40;
+
+    // ─── UI refs ────────────────────────────────────────────────────────────────
+    const statusEl    = document.getElementById('status');
+    const loadOverlay = document.getElementById('loadOverlay');
+    const loadMsgEl   = document.getElementById('loadMsg');
+    const capSkelEl   = document.getElementById('capSkel');
+    const capMorphEl  = document.getElementById('capMorph');
+    const capLipEl    = document.getElementById('capLip');
+    const stageBadge  = document.getElementById('stageBadge');
+    const rotXEl      = document.getElementById('rotX');
+    const rotYEl      = document.getElementById('rotY');
+    const rotZEl      = document.getElementById('rotZ');
+    const rotXValEl   = document.getElementById('rotXVal');
+    const rotYValEl   = document.getElementById('rotYVal');
+    const rotZValEl   = document.getElementById('rotZVal');
+
+    // ─── Application state ──────────────────────────────────────────────────────
+    // placeholderGroup lives in the scene permanently; visibility is toggled.
+    const placeholderGroup = new THREE.Group();
+    placeholderGroup.name  = 'PlaceholderGroup';
+    scene.add(placeholderGroup);
+
+    let importedWrapper = null;   // THREE.Group wrapping GLTF scene, or null
+    let importedObjURL  = null;   // current object URL (revoked on next load)
+    let faceMeshes      = [];     // meshes with morphTargetDictionary
+    let hasSkeleton     = false;
+    let speaking        = false;
+
+    // framingState: used by Reset Camera and stored after every successful load
+    let framingState = null;
+
+    // ─── Status helpers ─────────────────────────────────────────────────────────
+    function setStatus(html) {
+      statusEl.innerHTML = html;
+    }
+
+    function setCapabilities(skeleton, morphCount) {
+      hasSkeleton = skeleton;
+      capSkelEl.textContent  = skeleton ? 'Yes' : 'No (static mesh)';
+      capSkelEl.className    = skeleton ? 'cap-yes' : 'cap-no';
+      capMorphEl.textContent = morphCount > 0 ? `${morphCount} mesh(es)` : 'None detected';
+      capMorphEl.className   = morphCount > 0 ? 'cap-yes' : 'cap-no';
+      const lipOk            = morphCount > 0;
+      capLipEl.textContent   = lipOk
+        ? 'Available (morph-based)'
+        : 'Audio only – no morph targets';
+      capLipEl.className     = lipOk ? 'cap-yes' : 'cap-no';
+    }
+
+    function resetCapabilities() {
+      [capSkelEl, capMorphEl, capLipEl].forEach(el => {
+        el.textContent = '–';
+        el.className   = 'cap-no';
+      });
+    }
+
+    // ─── Procedural placeholder ──────────────────────────────────────────────────
+    (function buildPlaceholder() {
+      const m = (color, roughness = .75) =>
+        new THREE.MeshStandardMaterial({ color, roughness });
+      const skin    = m('#d6a184');
+      const clothes = m('#283e68');
+      const hair    = m('#211a1b');
+      const white   = m('#f5eee5');
+      const irisM   = m('#49352c');
+      const mouthM  = m('#542b30');
+
+      function sph(name, pos, scale, mat) {
+        const mesh = new THREE.Mesh(new THREE.SphereGeometry(1, 32, 24), mat);
+        mesh.name = name;
+        mesh.position.set(...pos);
+        mesh.scale.set(...scale);
+        placeholderGroup.add(mesh);
+        return mesh;
+      }
+      function cap(name, a, b, radius, mat) {
+        const s = new THREE.Vector3(...a), e = new THREE.Vector3(...b);
+        const d = e.clone().sub(s);
+        const mesh = new THREE.Mesh(
+          new THREE.CylinderGeometry(radius, radius, d.length(), 16), mat
+        );
+        mesh.name = name;
+        mesh.position.copy(s).add(e).multiplyScalar(.5);
+        mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), d.normalize());
+        placeholderGroup.add(mesh);
+      }
+
+      sph('torso',    [0,1.05,0],    [.43,.65,.27], clothes);
+      sph('neck',     [0,1.72,0],    [.13,.22,.13], skin);
+      sph('head',     [0,2.12,0],    [.38,.49,.32], skin);
+      sph('hair-cap', [0,2.37,-.035],[.39,.32,.33], hair);
+      sph('hair-back',[0,2.12,-.22], [.36,.49,.17], hair);
+      sph('fringe',   [0,2.39,.22],  [.3,.12,.12],  hair);
+      for (const s of [-1, 1]) {
+        sph('ear',       [s*.38,2.11,0],   [.065,.1,.06],    skin);
+        sph('eye-white', [s*.145,2.18,.283],[.085,.045,.038], white);
+        sph('iris',      [s*.145,2.18,.317],[.035,.036,.016], irisM);
+        sph('pupil',     [s*.145,2.18,.33], [.016,.022,.01],  m('#17151b'));
+        sph('brow',      [s*.145,2.27,.29], [.09,.018,.025],  hair);
+        cap('arm',  [s*.35,1.48,0],[s*.49,.72,.02],.105, skin);
+        sph('hand',      [s*.49,.65,.02], [.105,.13,.08],     skin);
+        cap('leg',  [s*.18,.57,0],[s*.18,.12,.015],.13,   m('#30394d'));
+        sph('shoe',      [s*.18,.09,.06],  [.15,.07,.23],     m('#151b2a'));
+      }
+      sph('nose',   [0,2.08,.32],  [.055,.095,.075], skin);
+      sph('mouth',  [0,1.99,.307], [.085,.018,.025],  mouthM);
+      sph('shadow', [0,.015,0],    [.85,.018,.42],    m('#141b2e'));
+    })();
+
+    // Default camera for placeholder
+    camera.position.set(0, 1.65, 6.5);
+    controls.target.set(0, 1.25, 0);
+    controls.update();
+    framingState = {
+      center:   new THREE.Vector3(0, 1.25, 0),
+      distance: 6.5,
+      camY:     1.65,
+    };
+
+    setStatus('Engine ready — upload a <strong>.glb</strong> to load the generated model.');
+    resetCapabilities();
+
+    // ─── Resource disposal ───────────────────────────────────────────────────────
+    function disposeMesh(mesh) {
+      mesh.geometry?.dispose();
+      const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+      for (const mat of mats) {
+        if (!mat) continue;
+        for (const key of ['map','normalMap','roughnessMap','metalnessMap',
+                           'emissiveMap','aoMap','alphaMap','bumpMap']) {
+          mat[key]?.dispose();
+        }
+        mat.dispose();
+      }
+    }
+
+    function disposeGroup(group) {
+      group.traverse(obj => { if (obj.isMesh) disposeMesh(obj); });
+      group.removeFromParent();
+    }
+
+    // ─── Camera framing ──────────────────────────────────────────────────────────
+    function frameObject(object) {
+      object.updateMatrixWorld(true);
+      const box = new THREE.Box3().setFromObject(object);
+      if (box.isEmpty()) return;
+      const size   = box.getSize(new THREE.Vector3());
+      const center = box.getCenter(new THREE.Vector3());
+      const maxDim = Math.max(size.x, size.y, size.z);
+      const fovRad = THREE.MathUtils.degToRad(camera.fov);
+      const dist   = (maxDim / (2 * Math.tan(fovRad / 2))) * 1.55;
+
+      framingState = {
+        center:   center.clone(),
+        distance: dist,
+        camY:     center.y + size.y * 0.06,
+      };
+      applyFraming();
+    }
+
+    function applyFraming() {
+      if (!framingState) return;
+      const { center, distance, camY } = framingState;
+      controls.target.copy(center);
+      camera.position.set(center.x, camY, center.z + distance);
+      camera.near = Math.max(0.01, distance / 100);
+      camera.far  = Math.max(100, distance * 12);
+      camera.updateProjectionMatrix();
+      controls.update();
+    }
+
+    // ─── Orientation sliders ─────────────────────────────────────────────────────
+    function readSliders() {
+      return {
+        rx: THREE.MathUtils.degToRad(parseFloat(rotXEl.value)),
+        ry: THREE.MathUtils.degToRad(parseFloat(rotYEl.value)),
+        rz: THREE.MathUtils.degToRad(parseFloat(rotZEl.value)),
+      };
+    }
+
+    function applyOrientation() {
+      if (!importedWrapper) return;
+      const { rx, ry, rz } = readSliders();
+      importedWrapper.rotation.set(rx, ry, rz);
+      importedWrapper.updateMatrixWorld(true);
+      frameObject(importedWrapper);
+    }
+
+    function syncSliderLabels() {
+      rotXValEl.textContent = `${rotXEl.value}°`;
+      rotYValEl.textContent = `${rotYEl.value}°`;
+      rotZValEl.textContent = `${rotZEl.value}°`;
+    }
+
+    function resetSliders() {
+      rotXEl.value = 0; rotYEl.value = 0; rotZEl.value = 0;
+      syncSliderLabels();
+    }
+
+    for (const [slider, label] of [
+      [rotXEl, rotXValEl], [rotYEl, rotYValEl], [rotZEl, rotZValEl]
+    ]) {
+      slider.addEventListener('input', () => {
+        label.textContent = `${slider.value}°`;
+        applyOrientation();
+      });
+    }
+
+    // ─── Model loading ───────────────────────────────────────────────────────────
+    async function loadModel(url, displayName, isBlob = false) {
+      loadMsgEl.textContent = `Loading ${displayName}…`;
+      loadOverlay.classList.add('active');
+      setStatus(`Loading <strong>${displayName}</strong>…`);
+
+      if (importedObjURL) {
+        URL.revokeObjectURL(importedObjURL);
+        importedObjURL = null;
+      }
+      if (isBlob) {
+        importedObjURL = url;
+      }
+
+      if (importedWrapper) {
+        disposeGroup(importedWrapper);
+        importedWrapper = null;
+        faceMeshes = [];
+      }
+
+      try {
+        const gltf = await new GLTFLoader().loadAsync(url);
+        const root = gltf.scene;
+        if (!root) throw new Error('GLTF scene is empty.');
+
+        root.updateMatrixWorld(true);
+        const rawBox  = new THREE.Box3().setFromObject(root);
+        const rawSize = rawBox.getSize(new THREE.Vector3());
+        const maxDim  = Math.max(rawSize.x, rawSize.y, rawSize.z);
+
+        if (!Number.isFinite(maxDim) || maxDim <= 0) {
+          throw new Error('No visible geometry found in the file.');
+        }
+
+        const rawCenter = rawBox.getCenter(new THREE.Vector3());
+        root.position.sub(rawCenter);
+        root.scale.setScalar(2.6 / maxDim);
+
+        root.updateMatrixWorld(true);
+        const normBox = new THREE.Box3().setFromObject(root);
+        root.position.y -= normBox.min.y;
+
+        const wrapper = new THREE.Group();
+        wrapper.name  = 'ImportedWrapper';
+        wrapper.add(root);
+
+        const { rx, ry, rz } = readSliders();
+        wrapper.rotation.set(rx, ry, rz);
+
+        placeholderGroup.visible = false;
+        scene.add(wrapper);
+        importedWrapper = wrapper;
+
+        faceMeshes  = [];
+        hasSkeleton = false;
+        wrapper.traverse(obj => {
+          if (obj.isSkinnedMesh) hasSkeleton = true;
+          if (obj.isMesh && obj.morphTargetDictionary && obj.morphTargetInfluences) {
+            faceMeshes.push(obj);
+          }
+        });
+
+        frameObject(wrapper);
+
+        let meshCount = 0;
+        wrapper.traverse(o => { if (o.isMesh) meshCount++; });
+
+        setStatus(
+          `<span class="ok">✔ ${displayName}</span> loaded.<br>` +
+          `Meshes: ${meshCount} · ` +
+          `Skeleton: ${hasSkeleton ? 'Yes' : 'No'} · ` +
+          `Morph-target meshes: ${faceMeshes.length}`
+        );
+        setCapabilities(hasSkeleton, faceMeshes.length);
+        stageBadge.textContent = `GLB · ${displayName}`;
+      } catch (err) {
+        if (importedWrapper) {
+          disposeGroup(importedWrapper);
+          importedWrapper = null;
+        }
+        if (isBlob && url) {
+          URL.revokeObjectURL(url);
+          importedObjURL = null;
+        }
+        placeholderGroup.visible = true;
+        framingState = {
+          center:   new THREE.Vector3(0, 1.25, 0),
+          distance: 6.5,
+          camY:     1.65,
+        };
+        applyFraming();
+        stageBadge.textContent = 'PROTOTYPE · 3D VIEWPORT';
+        resetCapabilities();
+        setStatus(`<span class="err">Could not load model: ${err.message}</span>`);
+        console.error('[AvatarEngine] GLB load error:', err);
+      } finally {
+        loadOverlay.classList.remove('active');
+      }
+    }
+
+    document.getElementById('loadRitikaGlbBtn')?.addEventListener('click', () => {
+      loadModel('./ritika.glb', 'ritika.glb', false);
+    });
+
+    document.getElementById('modelFile').addEventListener('change', async (e) => {
+      const file = e.target.files?.[0];
+      e.target.value = '';   // allow re-selecting the same file
+      if (!file) return;
+
+      if (file.size < 32) {
+        setStatus('<span class="err">File is too small to be a valid GLB/GLTF.</span>');
+        return;
+      }
+      const url = URL.createObjectURL(file);
+      loadModel(url, file.name, true);
+    });
+
+    // ─── Button handlers ─────────────────────────────────────────────────────────
+    document.getElementById('resetCamera').onclick = () => applyFraming();
+
+    document.getElementById('resetOrientation').onclick = () => {
+      resetSliders();
+      applyOrientation();
+    };
+
+    document.getElementById('reframe').onclick = () => {
+      const target = importedWrapper ?? placeholderGroup;
+      frameObject(target);
+    };
+
+    // ─── Speech synthesis demo ───────────────────────────────────────────────────
+    document.getElementById('speak').onclick = () => {
+      if (!('speechSynthesis' in window)) {
+        setStatus('<span class="warn">Speech synthesis is not supported in this browser.</span>');
+        return;
+      }
+      speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(
+        "Hello! I'm Ritika. Welcome to your interview. Let's start — tell me a little about yourself."
+      );
+      utter.rate  = 0.92;
+      utter.pitch = 1.05;
+      utter.onstart = () => {
+        speaking = true;
+        if (faceMeshes.length === 0) {
+          setStatus(
+            'Speaking… <span class="warn">No morph targets — audio only. ' +
+            'True lip-sync requires facial blend-shapes in the model.</span>'
+          );
+        } else {
+          setStatus('<span class="ok">Speaking with morph-target animation…</span>');
+        }
+      };
+      utter.onend = () => {
+        speaking = false;
+        setStatus('<span class="ok">Speech finished.</span>');
+      };
+      utter.onerror = (ev) => {
+        speaking = false;
+        if (ev.error !== 'interrupted') {
+          setStatus(`<span class="err">Speech error: ${ev.error}</span>`);
+        }
+      };
+      speechSynthesis.speak(utter);
+    };
+
+    document.getElementById('stopSpeech').onclick = () => {
+      if ('speechSynthesis' in window) speechSynthesis.cancel();
+      speaking = false;
+      setStatus('Speech stopped.');
+    };
+
+    // ─── Resize ──────────────────────────────────────────────────────────────────
+    function onResize() {
+      const w = stage.clientWidth, h = stage.clientHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h, false);
+    }
+    new ResizeObserver(onResize).observe(stage);
+    onResize();
+
+    // ─── Render loop ─────────────────────────────────────────────────────────────
+    const clock = new THREE.Clock();
+
+    function animate() {
+      requestAnimationFrame(animate);
+      const t = clock.getElapsedTime();
+      controls.update();
+
+      // Gentle idle on placeholder only
+      if (placeholderGroup.visible) {
+        placeholderGroup.position.y = Math.sin(t * 1.5) * 0.013;
+        placeholderGroup.rotation.y = Math.sin(t * 0.55) * 0.07;
+      }
+
+      // Morph-target lip-sync (only when the loaded model has morph targets)
+      if (faceMeshes.length > 0) {
+        for (const mesh of faceMeshes) {
+          const dict   = mesh.morphTargetDictionary;
+          const values = mesh.morphTargetInfluences;
+          for (const [name, index] of Object.entries(dict)) {
+            if (/jawopen|mouthopen|viseme_aa|viseme_oh/i.test(name)) {
+              if (speaking) {
+                values[index] = 0.12 + Math.abs(Math.sin(t * 14)) * 0.42;
+              } else {
+                values[index] = Math.max(0, values[index] - 0.05);
+              }
+            }
+          }
+        }
+      }
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
