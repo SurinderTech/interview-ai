@@ -381,7 +381,7 @@ Commit convention: `feat` `fix` `docs` `chore` `refactor`
 
 **Stop reading. Start practicing.**
 
-[![Talk to Priya Now](https://img.shields.io/badge/Talk%20to%20Priya%20Live%20Now%20%E2%86%92-7C3AED?style=for-the-badge&labelColor=0d0018&color=7C3AED)](https://interview-ai-n.vercel.app)
+
 
 *Built for students, job seekers and professionals who refuse to walk into an interview unprepared.*
 
