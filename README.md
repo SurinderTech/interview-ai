@@ -63,7 +63,7 @@
         <img src="https://raw.githubusercontent.com/SurinderTech/interview-ai/main/public/media/priya-avatar.jpg" width="200" alt="Priya" style="border-radius:16px" />
       </a>
       <br/><br/>
-      <strong>Priya (प्रिया)</strong><br/>
+      <strong>Priya</strong><br/>
       <sub>Career and Tech Interviews</sub><br/>
       <sub>Powered by Tavus phoenix-4.5</sub><br/><br/>
       <img src="https://img.shields.io/badge/LIVE%20VIDEO%20AI-7C3AED?style=flat-square&labelColor=1a0533" alt="live" />
