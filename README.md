@@ -71,7 +71,7 @@
     <td align="center" width="33%">
       <img src="https://raw.githubusercontent.com/SurinderTech/interview-ai/main/public/media/ananya-avatar.jpg" width="200" alt="Ananya" style="border-radius:16px" />
       <br/><br/>
-      <strong>Ananya (अनन्या)</strong><br/>
+      <strong>Ananya</strong><br/>
       <sub>Exam Mentor — JEE, NEET, UPSC</sub><br/>
       <sub>Adaptive question sessions</sub><br/><br/>
       <img src="https://img.shields.io/badge/EXAM%20SPECIALIST-818cf8?style=flat-square&labelColor=0f1133" alt="exam" />
