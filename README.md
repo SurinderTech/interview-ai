@@ -29,7 +29,7 @@
 
 <br/><br/>
 
-### Priya (प्रिया) — AI Interviewer · Tavus phoenix-4.5
+### Priya — AI Interviewer · Tavus phoenix-4.5
 
 > She is **online right now**. Click her photo or the button below to start a real interview — no sign-up needed.
 
@@ -79,7 +79,7 @@
     <td align="center" width="33%">
       <img src="https://raw.githubusercontent.com/SurinderTech/interview-ai/main/public/media/kavya-avatar.jpg" width="200" alt="Kavya" style="border-radius:16px" />
       <br/><br/>
-      <strong>Kavya (काव्या)</strong><br/>
+      <strong>Kavya</strong><br/>
       <sub>Guidance and Study Coach</sub><br/>
       <sub>Clarity, confidence and roadmaps</sub><br/><br/>
       <img src="https://img.shields.io/badge/STUDY%20COACH-f472b6?style=flat-square&labelColor=1a0020" alt="coach" />
