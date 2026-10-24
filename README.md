@@ -122,7 +122,7 @@
 
 ---
 
-## Features
+## Feature
 
 | Feature | Description |
 |---|---|
